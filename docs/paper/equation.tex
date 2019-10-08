@@ -19,9 +19,13 @@
 \figref{簡易モデル}を運動方程式は，
 
 \begin{eqnarray}
-    m_1 \ddot{u_1} + c_1(\dot{u_1} - \dot{u_2}) + k_1 (u_1 - u_2) &=& 0 \\
-    m_2 \ddot{u_2} + c_2(\dot{u_2} - \dot{u_1}) + k_2 (u_2 - u_3) + k_1 (u_2 - u_1) &=& 0 \\
-    m_3 \ddot{u_3} + c_2(\dot{u_3 - \dot{u_2}}) + k_2 (u_3 - u_2) + k_3 u_3 &=& 0
+    \begin{matrix}
+        m_1 \ddot{u_1} &+&  & & k_1 (u_1 - u_2) &=& 0 \\ 
+        m_2 \ddot{u_2} &+& c_2(\dot{u_2} - \dot{u_1}) &+& k_2 (u_2 - u_3) + k_1 (u_2 - u_1) &=& 0 \\ 
+        m_3 \ddot{u_3} &+& c_2(\dot{u_3} - \dot{u_2}) &+& k_2 (u_3 - u_2) + k_3 u_3 &=& 0 \\ 
+        m_4 \ddot{u_4} &+& c_5(\dot{u_4} - \dot{u_5}) &+& k_5 (u_4 - u_5) + k_4 (u_4 - u_3) &=& 0 \\ 
+        m_5 \ddot{u_5} &+& c_5(\dot{u_5} - \dot{u_4}) &+& k_5 (u_5 - u_4) &=& 0
+    \end{matrix}        
 \end{eqnarray}
 
 である．運動方程式より状態方程式を起算すると,
