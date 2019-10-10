@@ -8,7 +8,7 @@
     \caption{ローズ・ピアノの簡易物理モデル}
     \label{fig:簡易モデル}
 \end{figure}
-% ![ローズ・ピアノ簡易モデル](img/system-model.png)
+
 
 図はローズ・ピアノのシステムモデルである．$k$はバネ定数，$m$は質量，$u$は変位，$c$はダッシュポットである．図中上部がTonebarになり，図中下部がTineに相当する．TonebarとTineをつないでいるPoleは$m_3$に相当する．
 
@@ -21,7 +21,7 @@
 主変数 $u$ に関する連立常微分方程式は，
 
 \begin{equation}
-    M \frac{d^2 u}{dt^2} + B_c^T R B \frac{du}{dt} + B_k^T D B_u = f    
+    M \frac{d^2 u}{dt^2} + B_c^T R B_c \frac{du}{dt} + B_k^T D B_k = f    
 \end{equation}
 
 である．$M$は質量マトリクス，$D$はバネマトリクス，$R$は減衰マトリクス，$B_c$と$B_k$は剛性マトリクス，$f$は荷重マトリクスである．連立常微分方程式を粘弾性の運動方程式で一般化すると
@@ -47,6 +47,17 @@
 である．連立方程式は変位に着目したとき，対象の変数と接続する変位との差を取ることで求まる．例えば，$u_2$の$c_2$及び$k_2$に着目するならば，$u_2$と接続している変位$u_3$について式を立てると，$c_2(\dot{u_2} - \dot{u_3})$と$k_2(u_2 - u_3)$が得られる．同じように$u_2$と接続している$u_1$に着目すると，$u_1$を接続しているのは$k_1$だけなので減衰項は$0$として$k_2(u_2 - u_1)$だけが得られる．それぞれの項を足し合わせると$u_2$に関する運動方程式を立てられる．これをすべての変位で繰り返すと連立方程式となる．
 
 運動方程式より状態方程式は，
+
+\begin{eqnarray}
+    f = 
+    \left[\begin{matrix}
+        f_1 \\
+        f_2 \\
+        f_3 \\
+        f_4 \\
+        f_5 
+    \end{matrix}\right]
+\end{eqnarray}
 
 \begin{eqnarray}
     M = 
@@ -107,22 +118,8 @@
     \end{matrix}\right)
 \end{eqnarray}
 
-が得られる．
-
-\subsection{簡易物理モデルの固有振動数}
-
-剛性マトリクスを連立常微分方程式に代入すれば簡易物理モデル全体の全荷重を求められるが$k$と$c$が非自明である．
-
-ここではTineの固有振動数を $261.6$ Hz （中心のド）とおく．固有角振動数は，
+が得られる．これにより，
 
 \begin{eqnarray}
-    \omega = \sqrt{\frac{k}{m}}
+    B_k^T D B_k u =
 \end{eqnarray}
-
-である．固有振動数は，
-
-\begin{eqnarray}
-    f = \frac{\omega}{2\pi} = \frac{1}{2\pi}\sqrt{\frac{k}{m}}
-\end{eqnarray}
-
-である．
