@@ -1,6 +1,10 @@
 \section{ローズ・ピアノの簡易物理モデル}
 
-本章ではローズ・ピアノ振動体を簡略化した物理モデルを検討する．簡易モデルに使用するシステムモデルを図\ref{fig:簡易モデル}に示す．
+本章ではローズ・ピアノ振動体を簡略化した物理モデルを検討する．本章では，ローズ・ピアノのシステムモデルを連立常微分方程式として表し，TineとTonebarの連成振動を考慮した簡易物理モデルを提案する．
+
+\subsection{簡易物理モデル}
+
+簡易物理モデルに使用するシステムモデルを図\ref{fig:簡易モデル}に示す．
 
 \begin{figure}
     \centering
@@ -9,10 +13,57 @@
     \label{fig:簡易モデル}
 \end{figure}
 
-
 図はローズ・ピアノのシステムモデルである．$k$はバネ定数，$m$は質量，$u$は変位，$c$はダッシュポット，$l$は節の長さ，$\theta$は節の角度である．図中上部がTonebarになり，図中下部がTineに相当する．TonebarとTineをつないでいるPoleは$m_3$に相当する．
 
-本章では，ローズ・ピアノのシステムモデルを連立常微分方程式として表し，TineとTonebarの連成振動を考慮した簡易物理モデルを提案する．
+質点に着目すると，$m_1$がTine先端，$m_6$がTonebar先端である．$m_2$はTuning Springとなっている．$m_3$はHammerの打点であり，$m_7$はHammerである．Tonebarは3つに分けて考えている．$m_4$はPoleが取り付けられているところである．$m_5$はTonebarがねじれている部分であり，$m_6$はTonebarが共鳴器として作用する部分である．
+
+
+
+\subsection{ラグランジュ方程式}
+
+簡易物理モデルは3ないしは4重振り子と複雑な系の問題となる．変位を一般化する前に，ラグランジュ方程式で変位を表せることを検討する．
+
+ラグランジュ方程式は
+
+\begin{eqnarray}
+    L = T - U    
+\end{eqnarray}
+
+で与えられる方程式である．$T$は運動エネルギ，$U$はポテンシャルエネルギ，$L$はラグランジアンである．
+
+簡易物理モデルを$u$を$x$と$y$の座標成分として表すと
+
+\begin{eqnarray}
+    \begin{matrix}
+        x_1 &=& l_1 \cos \theta_1 &+& l_2 \cos \theta_2 &+& l_3 \cos \theta_3 &+& l_4 \cos \theta_4\\
+        x_2 &=& l_2 \cos \theta_2 &+& l_3 \cos \theta_3 &+& l_4 \cos \theta_4 & & \\
+        x_3 &=& l_3 \cos \theta_3 &+& l_4 \cos \theta_4 & & & &\\
+        x_4 &=& l_4 \cos \theta_4 & & & & & &\\
+        x_5 &=& l_5 \cos \theta_5 &+& l_4 \cos \theta_4 & & & &\\
+        x_6 &=& l_6 \cos \theta_6 &+& l_5 \cos \theta_5 &+& l_4 \cos \theta_4 & &\\
+    \end{matrix}
+\end{eqnarray}
+
+\begin{eqnarray}
+    \begin{matrix}
+        y_1 &=& l_1 \sin \theta_1 &+& l_2 \sin \theta_2 &+& l_3 \sin \theta_3 &+& l_4 \sin \theta_4\\
+        y_2 &=& l_2 \sin \theta_2 &+& l_3 \sin \theta_3 &+& l_4 \sin \theta_4 & & \\
+        y_3 &=& l_3 \sin \theta_3 &+& l_4 \sin \theta_4 & & & &\\
+        y_4 &=& l_4 \sin \theta_4 & & & & & &\\
+        y_5 &=& l_5 \sin \theta_5 &+& l_4 \sin \theta_4 & & & &\\
+        y_6 &=& l_6 \sin \theta_6 &+& l_5 \sin \theta_5 &+& l_4 \sin \theta_4 & & \\
+    \end{matrix}
+\end{eqnarray}
+
+である．$u_7$はHammerであり，位置関係は拘束されていないので本説では除外する．
+
+運動エネルギ$T$は
+
+\begin{eqnarray}
+    T = \frac{1}{2} \sum^6_{i_1} m_i(\dot{x} + \dot{y})
+\end{eqnarray}
+
+である．
 
 
 
@@ -52,7 +103,7 @@
 
 \begin{eqnarray}
     u = 
-    \left[\begin{matrix}
+    \begin{bmatrix}
         u_1 \\
         u_2 \\
         u_3 \\
@@ -61,12 +112,12 @@
         u_6 \\
         u_7 \\
         u_8
-    \end{matrix}\right]
+    \end{bmatrix}
 \end{eqnarray}
 
 \begin{eqnarray}
     f = 
-    \left[\begin{matrix}
+    \begin{bmatrix}
         f_1 \\
         f_2 \\
         f_3 \\
@@ -75,7 +126,7 @@
         f_6 \\
         f_7 \\
         f_8
-    \end{matrix}\right]
+    \end{bmatrix}
 \end{eqnarray}
 
 \begin{eqnarray}
