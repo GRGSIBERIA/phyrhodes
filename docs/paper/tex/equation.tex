@@ -86,10 +86,20 @@ Hammerを除き，境界条件を含めると質点は7つ存在する．本章�
 運動エネルギ$T$は
 
 \begin{eqnarray}
+    \label{math:lagrange-T}
     T = \frac{1}{2} \sum^6_{i_1} m_i({x'}_i^2 + {y'}_i^2)
 \end{eqnarray}
 
+である．このとき，$\theta$を時刻$t$の時間関数とすると
+
+\begin{eqnarray}
+    x' = l \cos \lim_{\Delta t \rightarrow } \frac{\theta(t+\Delta t) - \theta(t)}{t + \Delta t - t} = - l \sin \dot{\theta}\\
+    y' = l \sin \lim_{\Delta t \rightarrow } \frac{\theta(t+\Delta t) - \theta(t)}{t + \Delta t - t} = l \cos \dot{\theta}\\
+\end{eqnarray}
+
 である．
+
+式\ref{math:lagrange-T}を展開すると，
 
 
 
