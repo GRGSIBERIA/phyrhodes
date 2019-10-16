@@ -32,7 +32,7 @@ Hammerを除き，境界条件を含めると質点は7つ存在する．本章�
     \end{matrix}
 \end{eqnarray}
 
-となるので，ラグランジアンでは7質点6自由度のバネ-マス-ダンパー系の物理モデルとなる．並進を考慮すると，
+となるので，ラグランジアンで角度を対象とすると7質点6自由度のバネ-マス-ダンパー系の物理モデルとなる．並進を考慮すると，
 
 \begin{eqnarray}
     \begin{matrix}
@@ -42,7 +42,6 @@ Hammerを除き，境界条件を含めると質点は7つ存在する．本章�
 \end{eqnarray}
 
 となるので，7質点9自由度となり，計15自由度のバネ-マス-ダンパー系の物理モデルとなる．
-
 
 
 \subsection{ラグランジュ方程式}
@@ -90,18 +89,19 @@ Hammerを除き，境界条件を含めると質点は7つ存在する．本章�
     T = \frac{1}{2} \sum^6_{i_1} m_i({x'}_i^2 + {y'}_i^2)
 \end{eqnarray}
 
-である．このとき，$\theta$を時刻$t$の時間関数とすると
-
-\begin{eqnarray}
-    x' = l \cos \lim_{\Delta t \rightarrow } \frac{\theta(t+\Delta t) - \theta(t)}{t + \Delta t - t} = - l \sin \dot{\theta}\\
-    y' = l \sin \lim_{\Delta t \rightarrow } \frac{\theta(t+\Delta t) - \theta(t)}{t + \Delta t - t} = l \cos \dot{\theta}\\
-\end{eqnarray}
-
-である．
+である．このとき，$\theta$を時刻$t$の時間関数とすると合成関数の微分であるため，$l \dot{\theta} \cos \theta$と$-l \dot{\theta} \sin \theta$となる．
 
 式\ref{math:lagrange-T}を展開すると，
 
-
+\begin{eqnarray}
+    2T = 
+        m_{1} \left(\left(- \dot{\theta_1} l_{1} \sin{\left(\theta_1 \right)} - \dot{\theta_2} l_{2} \sin{\left(\theta_2 \right)} - \dot{\theta_3} l_{3} \sin{\left(\theta_3 \right)} - \dot{\theta_4} l_{4} \sin{\left(\theta_4 \right)}\right)^{2} + \left(\dot{\theta_1} l_{1}\cos{\left(\theta_1 \right)} + \dot{\theta_2} l_{2} \cos{\left(\theta_2 \right)} + \dot{\theta_3} l_{3} \cos{\left(\theta_3 \right)} + \dot{\theta_4} l_{4} \cos{\left(\theta_4 \right)}\right)^{2}\right) + \\
+        m_{2} \left(\left(- \dot{\theta_2} l_{2} \sin{\left(\theta_2\right)} - \dot{\theta_3} l_{3} \sin{\left(\theta_3 \right)} - \dot{\theta_4} l_{4} \sin{\left(\theta_4 \right)}\right)^{2} + \left(\dot{\theta_2} l_{2} \cos{\left(\theta_2 \right)} + \dot{\theta_3} l_{3} \cos{\left(\theta_3 \right)} + \dot{\theta_4} l_{4} \cos{\left(\theta_4 \right)}\right)^{2}\right) + \\
+        m_{3} \left(\left(- \dot{\theta_3} l_{3} \sin{\left(\theta_3 \right)} - \dot{\theta_4} l_{4} \sin{\left(\theta_4 \right)}\right)^{2} + \left(\dot{\theta_3} l_{3} \cos{\left(\theta_3 \right)} + \dot{\theta_4} l_{4} \cos{\left(\theta_4 \right)}\right)^{2}\right) + \\
+        m_{4} \left(\dot{\theta_4}^{2} l_{4}^{2} \sin^{2}{\left(\theta_4 \right)} + \dot{\theta_4}^{2} l_{4}^{2} \cos^{2}{\left(\theta_4 \right)}\right) + \\
+        m_{5} \left(\left(- \dot{\theta_4} l_{4} \sin{\left(\theta_4 \right)} - \dot{\theta_5} l_{5} \sin{\left(\theta_5 \right)}\right)^{2} + \left(\dot{\theta_4} l_{4} \cos{\left(\theta_4 \right)} + \dot{\theta_5} l_{5} \cos{\left(\theta_5 \right)}\right)^{2}\right) + \\
+        m_{6} \left(\left(- \dot{\theta_4} l_{4} \sin{\left(\theta_4 \right)} - \dot{\theta_5} l_{5} \sin{\left(\theta_5 \right)} - \dot{\theta_6} l_{6} \sin{\left(\theta_6 \right)}\right)^{2} + \left(\dot{\theta_4} l_{4} \cos{\left(\theta_4 \right)} + \dot{\theta_5} l_{5} \cos{\left(\theta_5 \right)} + \dot{\theta_6} l_{6} \cos{\left(\theta_6 \right)}\right)^{2}\right)
+\end{eqnarray}
 
 \subsection{連立常微分方程式}
 
