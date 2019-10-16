@@ -10,6 +10,9 @@ m = symbols("m_1 m_2 m_3 m_4 m_5 m_6")
 a = [l[i] * cos(t[i]) for i, _ in enumerate(x)]
 b = [l[i] * sin(t[i]) for i, _ in enumerate(x)]
 
+da = [-l[i] * t[i] * sin(t[i]) for i, _ in enumerate(x)]
+db = [l[i] * t[i] * cos(t[i]) for i, _ in enumerate(x)]
+
 x = [
     a[0] + a[1] + a[2] + a[3],
     a[1] + a[2] + a[3],
@@ -28,10 +31,7 @@ y = [
     b[5] + b[4] + b[3]
 ]
 
-print(x[0])
 
-xd = diff(a[0], t[0]) + diff(a[1], t[1]) + diff(a[2], t[2]) + diff(a[3], t[3])
-print(xd)
 
 #
 #x1 = l1 * cos(t1) + l2 * cos(t2) + l3 * cos(t3) + l4 * cos(t4)
