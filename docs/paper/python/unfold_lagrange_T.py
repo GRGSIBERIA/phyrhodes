@@ -1,5 +1,5 @@
 import sympy
-from sympy import symbols, cos, sin, diff, Rational, latex, factor
+from sympy import symbols, cos, sin, diff, Rational, latex, factor, expand
 
 x = symbols("x_1 x_2 x_3 x_4 x_5 x_6")
 y = symbols("y_1 y_2 y_3 y_4 y_5 y_6")
@@ -33,7 +33,9 @@ dy = [
 ]
 
 T = [m[i] * (dx[i] ** 2 + dy[i] ** 2) for i, _ in enumerate(x)]
-print(latex(sum(T)))
+for temp in T:
+    print(latex(expand(temp)))
+    print()
 
 #
 #x1 = l1 * cos(t1) + l2 * cos(t2) + l3 * cos(t3) + l4 * cos(t4)
