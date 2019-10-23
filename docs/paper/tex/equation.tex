@@ -118,44 +118,8 @@ Hammerを除き，境界条件を含めると質点は7つ存在する．本章�
             & & + m_{6} \left(\dot{\theta_4} l_{4} \cos{\left(\theta_4 \right)} + \dot{\theta_5} l_{5}\cos{\left(\theta_5 \right)} + \dot{\theta_6} l_{6} \cos{\left(\theta_6 \right)}\right)^{2}
 \end{eqnarray}
 
-展開すると，
+与えられた式の形から$T$の形で整理できないため，運動エネルギは$T$とする．
 
-\begin{eqnarray}
-    T_1 &=& \dot{\theta_1}^{2} l_{1}^{2} m_{1} \sin^{2}{\left(\theta_1 \right)} + 
-            \dot{\theta_1}^{2} l_{1}^{2} m_{1} \cos^{2}{\left(\theta_1 \right)} + \nonumber \\
-        & & 2 \dot{\theta_1} \dot{\theta_2} l_{1} l_{2} m_{1} \sin{\left(\theta_1 \right)} \sin{\left(\theta_2 \right)} + 
-            2 \dot{\theta_1} \dot{\theta_2} l_{1} l_{2} m_{1} \cos{\left(\theta_1 \right)} \cos{\left(\theta_2 \right)} + \nonumber \\
-        & & 2 \dot{\theta_1} \dot{\theta_3} l_{1} l_{3} m_{1} \sin{\left(\theta_1 \right)} \sin{\left(\theta_3 \right)} + 
-            2 \dot{\theta_1} \dot{\theta_3} l_{1} l_{3} m_{1} \cos{\left(\theta_1 \right)} \cos{\left(\theta_3 \right)} + \nonumber \\
-        & & 2 \dot{\theta_1} \dot{\theta_4} l_{1} l_{4} m_{1} \sin{\left(\theta_1 \right)} \sin{\left(\theta_4 \right)} + 
-            2 \dot{\theta_1} \dot{\theta_4} l_{1} l_{4} m_{1} \cos{\left(\theta_1 \right)} \cos{\left(\theta_4 \right)} + \nonumber \\
-        & & \dot{\theta_2}^{2} l_{2}^{2} m_{1} \sin^{2}{\left(\theta_2 \right)} + 
-            \dot{\theta_2}^{2} l_{2}^{2} m_{1} \cos^{2}{\left(\theta_2 \right)} + \nonumber \\
-        & & 2 \dot{\theta_2} \dot{\theta_3} l_{2} l_{3} m_{1} \sin{\left(\theta_2 \right)} 
-            \sin{\left(\theta_3 \right)} + \nonumber \\
-        & & 2 \dot{\theta_2} \dot{\theta_3} l_{2} l_{3} m_{1} \cos{\left(\theta_2 \right)} \cos{\left(\theta_3 \right)} + 
-            2 \dot{\theta_2} \dot{\theta_4} l_{2} l_{4} m_{1} \sin{\left(\theta_2 \right)} \sin{\left(\theta_4 \right)} + \nonumber \\
-        & & 2 \dot{\theta_2} \dot{\theta_4} l_{2} l_{4} m_{1} \cos{\left(\theta_2 \right)} \cos{\left(\theta_4 \right)} + 
-            \dot{\theta_3}^{2} l_{3}^{2} m_{1} \sin^{2}{\left(\theta_3 \right)} + \dot{\theta_3}^{2} l_{3}^{2} m_{1} \cos^{2}{\left(\theta_3 \right)} + \nonumber \\
-        & & 2 \dot{\theta_3} \dot{\theta_4} l_{3} l_{4} m_{1} \sin{\left(\theta_3 \right)} \sin{\left(\theta_4 \right)} + 
-            2 \dot{\theta_3} \dot{\theta_4} l_{3} l_{4} m_{1} \cos{\left(\theta_3 \right)} \cos{\left(\theta_4 \right)} + \nonumber \\
-        & & \dot{\theta_4}^{2} l_{4}^{2} m_{1} \sin^{2}{\left(\theta_4 \right)} + \dot{\theta_4}^{2} l_{4}^{2} m_{1} \cos^{2}{\left(\theta_4 \right)}
-\end{eqnarray}
-\begin{eqnarray}
-    T_2 = \dot{\theta_2}^{2} l_{2}^{2} m_{2} \sin^{2}{\left(\theta_2 \right)} + \dot{\theta_2}^{2} l_{2}^{2} m_{2} \cos^{2}{\left(\theta_2 \right)} + 2 \dot{\theta_2} \dot{\theta_3} l_{2} l_{3} m_{2} \sin{\left(\theta_2 \right)} \sin{\left(\theta_3 \right)} + 2 \dot{\theta_2} \dot{\theta_3} l_{2} l_{3} m_{2} \cos{\left(\theta_2 \right)} \cos{\left(\theta_3 \right)} + 2 \dot{\theta_2} \dot{\theta_4} l_{2} l_{4} m_{2} \sin{\left(\theta_2 \right)} \sin{\left(\theta_4 \right)} + 2 \dot{\theta_2} \dot{\theta_4} l_{2} l_{4} m_{2} \cos{\left(\theta_2 \right)} \cos{\left(\theta_4 \right)} + \dot{\theta_3}^{2} l_{3}^{2} m_{2} \sin^{2}{\left(\theta_3 \right)} + \dot{\theta_3}^{2} l_{3}^{2} m_{2} \cos^{2}{\left(\theta_3 \right)} + 2 \dot{\theta_3} \dot{\theta_4} l_{3} l_{4} m_{2} \sin{\left(\theta_3 \right)} \sin{\left(\theta_4 \right)} + 2 \dot{\theta_3} \dot{\theta_4} l_{3} l_{4} m_{2} \cos{\left(\theta_3 \right)} \cos{\left(\theta_4 \right)} + \dot{\theta_4}^{2} l_{4}^{2} m_{2} \sin^{2}{\left(\theta_4 \right)} + \dot{\theta_4}^{2} l_{4}^{2} m_{2} \cos^{2}{\left(\theta_4 \right)}
-\end{eqnarray}
-\begin{eqnarray}
-    T_3 = \dot{\theta_3}^{2} l_{3}^{2} m_{3} \sin^{2}{\left(\theta_3 \right)} + \dot{\theta_3}^{2} l_{3}^{2} m_{3} \cos^{2}{\left(\theta_3 \right)} + 2 \dot{\theta_3} \dot{\theta_4} l_{3} l_{4} m_{3} \sin{\left(\theta_3 \right)} \sin{\left(\theta_4 \right)} + 2 \dot{\theta_3} \dot{\theta_4} l_{3} l_{4} m_{3} \cos{\left(\theta_3 \right)} \cos{\left(\theta_4 \right)} + \dot{\theta_4}^{2} l_{4}^{2} m_{3} \sin^{2}{\left(\theta_4 \right)} + \dot{\theta_4}^{2} l_{4}^{2} m_{3} \cos^{2}{\left(\theta_4 \right)}
-\end{eqnarray}
-\begin{eqnarray}
-    T_4 = \dot{\theta_4}^{2} l_{4}^{2} m_{4} \sin^{2}{\left(\theta_4 \right)} + \dot{\theta_4}^{2} l_{4}^{2} m_{4} \cos^{2}{\left(\theta_4 \right)}
-\end{eqnarray}
-\begin{eqnarray}
-    T_5 = \dot{\theta_4}^{2} l_{4}^{2} m_{5} \sin^{2}{\left(\theta_4 \right)} + \dot{\theta_4}^{2} l_{4}^{2} m_{5} \cos^{2}{\left(\theta_4 \right)} + 2 \dot{\theta_4} \dot{\theta_5} l_{4} l_{5} m_{5} \sin{\left(\theta_4 \right)} \sin{\left(\theta_5 \right)} + 2 \dot{\theta_4} \dot{\theta_5} l_{4} l_{5} m_{5} \cos{\left(\theta_4 \right)} \cos{\left(\theta_5 \right)} + \dot{\theta_5}^{2} l_{5}^{2} m_{5} \sin^{2}{\left(\theta_5 \right)} + \dot{\theta_5}^{2} l_{5}^{2} m_{5} \cos^{2}{\left(\theta_5 \right)}
-\end{eqnarray}
-\begin{eqnarray}
-    T_6 = \dot{\theta_4}^{2} l_{4}^{2} m_{6} \sin^{2}{\left(\theta_4 \right)} + \dot{\theta_4}^{2} l_{4}^{2} m_{6} \cos^{2}{\left(\theta_4 \right)} + 2 \dot{\theta_4} \dot{\theta_5} l_{4} l_{5} m_{6} \sin{\left(\theta_4 \right)} \sin{\left(\theta_5 \right)} + 2 \dot{\theta_4} \dot{\theta_5} l_{4} l_{5} m_{6} \cos{\left(\theta_4 \right)} \cos{\left(\theta_5 \right)} + 2 \dot{\theta_4} \dot{\theta_6} l_{4} l_{6} m_{6} \sin{\left(\theta_4 \right)} \sin{\left(\theta_6 \right)} + 2 \dot{\theta_4} \dot{\theta_6} l_{4} l_{6} m_{6} \cos{\left(\theta_4 \right)} \cos{\left(\theta_6 \right)} + \dot{\theta_5}^{2} l_{5}^{2} m_{6} \sin^{2}{\left(\theta_5 \right)} + \dot{\theta_5}^{2} l_{5}^{2} m_{6} \cos^{2}{\left(\theta_5 \right)} + 2 \dot{\theta_5} \dot{\theta_6} l_{5} l_{6} m_{6} \sin{\left(\theta_5 \right)} \sin{\left(\theta_6 \right)} + 2 \dot{\theta_5} \dot{\theta_6} l_{5} l_{6} m_{6} \cos{\left(\theta_5 \right)} \cos{\left(\theta_6 \right)} + \dot{\theta_6}^{2} l_{6}^{2} m_{6} \sin^{2}{\left(\theta_6 \right)} + \dot{\theta_6}^{2} l_{6}^{2} m_{6} \cos^{2}{\left(\theta_6 \right)}
-\end{eqnarray}
 
 \subsection{連立常微分方程式}
 

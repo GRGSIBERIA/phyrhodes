@@ -33,10 +33,8 @@ dy = [
 ]
 
 T = [m[i] * (dx[i] ** 2 + dy[i] ** 2) for i, _ in enumerate(x)]
-for temp in T:
-    print(latex(expand(temp)))
-    print()
 
+print(latex(expand(sum(T))))
 #
 #x1 = l1 * cos(t1) + l2 * cos(t2) + l3 * cos(t3) + l4 * cos(t4)
 #x2 = l2 * cos(t2) + l3 * cos(t3) + l4 * cos(t4)
